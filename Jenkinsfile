@@ -1,15 +1,13 @@
-pipeline {
-    agent any
-
-    stages {
-        stage ('Compile Stage') {
-
-            steps {
-              
-                    sh 'mvn clean compile'
-                
-            }
-        }
-
+node {
+  
+    stage ('SCM Checkout'){
+            git 'https://github.com/arquimedesjr/app_cicd_apirest'
+         
     }
+    
+    stage ('Compile-package){
+            sh 'mvn package'
+         
+    }
+    
 }
