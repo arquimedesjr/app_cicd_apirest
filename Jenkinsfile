@@ -11,11 +11,6 @@ pipeline {
          bat 'mvn clean package' 
       }
     }
-    stage('Test'){
-     steps {
-      
-     }      
-    }
    stage('Deploy') {
      steps {
         git credentialsId: 'heroku', url: 'https://git.heroku.com/apirestxampl.git'
