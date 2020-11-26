@@ -11,5 +11,15 @@ pipeline {
          bat 'mvn clean package' 
       }
     }
+    stage('Test'){
+     steps {
+      
+     }      
+    }
+   stage('Deploy') {
+     steps {
+        
+      }
+    }
   }
 }
