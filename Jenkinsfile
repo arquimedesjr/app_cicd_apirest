@@ -6,5 +6,10 @@ pipeline {
          git credentialsId: 'github', url: 'https://github.com/arquimedesjr/app_cicd_apirest' 
       }
     }
+    stage ('Maven Build'){
+      steps{
+         bat 'mvn clean package' 
+      }
+    }
   }
 }
