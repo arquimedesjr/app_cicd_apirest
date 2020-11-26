@@ -13,7 +13,6 @@ pipeline {
     }
    stage('Deploy') {
      steps {
-        git credentialsId: 'heroku', url: 'https://git.heroku.com/apirestxampl.git'
         bat 'git remote add heroku https://git.heroku.com/apirestxampl.git'
         bat 'git push herocu master'
       }
